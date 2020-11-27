@@ -48,6 +48,30 @@ public class ServicePrice implements ServiceItem {
 
     @Override
     public float getSale(boolean isMember, float parServicePrice) {
+         if(isMember)
+         {
+        
+            return (float) (parServicePrice * 0.1);
+        }
+        else
+        {
+            return 0;
+        }
+    }
+     public float getTotalPay(float priceService, float discount)
+    {
+        return priceService - discount;
+    }
+
+    void setpriceService(float price) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    float getPriceService() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    String getServicePrice() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
